@@ -1,0 +1,2401 @@
+[2018-06-24 12:14:17.926] ets Jun  8 2016 00:22:57
+[2018-06-24 12:14:17.926] 
+[2018-06-24 12:14:17.926] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:14:17.931] configsip: 0, SPIWP:0xee
+[2018-06-24 12:14:17.931] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:14:17.937] mode:DIO, clock div:2
+[2018-06-24 12:14:17.942] load:0x3fff0018,len:4
+[2018-06-24 12:14:17.942] load:0x3fff001c,len:5520
+[2018-06-24 12:14:17.948] ho 0 tail 12 room 4
+[2018-06-24 12:14:17.948] load:0x40078000,len:0
+[2018-06-24 12:14:17.948] load:0x40078000,len:12488
+[2018-06-24 12:14:17.955] entry 0x40078fd4
+[2018-06-24 12:14:17.955] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:14:17.961] I (30) boot: compile time 11:17:11
+[2018-06-24 12:14:17.966] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:14:17.972] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:14:17.972] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:14:17.977] I (44) boot: SPI Flash Size : 4MB
+[2018-06-24 12:14:17.983] I (48) boot: Partition Table:
+[2018-06-24 12:14:17.989] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:14:17.994] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:14:18.000] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:14:18.011] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:14:18.016] I (81) boot: End of partition table
+[2018-06-24 12:14:18.022] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:14:18.048] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:14:18.053] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:14:18.064] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:14:18.079] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:14:18.216] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:14:18.231] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:14:18.237] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:14:18.248] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:14:18.253] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:14:18.259] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:14:18.259] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:14:18.270] I (0) cpu_start: App cpu up.
+[2018-06-24 12:14:18.270] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:14:18.275] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:14:18.287] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:14:18.287] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:14:18.298] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:14:18.303] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:14:18.309] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:14:18.314] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:14:18.320] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:14:18.325] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:14:18.331] D (402) clk: RTC_SLOW_CLK calibration value: 3345779
+[2018-06-24 12:14:18.340] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:14:18.340] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:14:18.345] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:14:18.350] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:14:18.356] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:14:18.362] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:14:18.367] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:14:18.373] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:14:18.378] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:14:18.384] D (122) SYS: Starting up...
+[2018-06-24 12:14:18.384] D (125) SYS: Chip init
+[2018-06-24 12:14:18.390] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:14:18.414] D (161) SYS: Board/Hardware init
+[2018-06-24 12:14:18.414] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.425] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.436] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.441] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.453] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.464] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.469] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.481] I (218) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.491] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.497] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:14:18.508] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:14:18.514] D (252) SYS: I2C Init
+[2018-06-24 12:14:18.514] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:14:18.520] D (259) SYS: Pre-Task init
+[2018-06-24 12:14:18.525] D (262) SYS: WiFi init
+[2018-06-24 12:14:18.525] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:14:18.531] 
+[2018-06-24 12:14:18.531] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:14:18.536] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:14:18.541] 
+[2018-06-24 12:14:18.541] D (281) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:14:18.547] D (285) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:14:18.547] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:14:18.554] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:14:18.558] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:14:18.564] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:14:18.569] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:14:18.580] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:14:18.586] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:14:18.586] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:14:18.591] D (332) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:14:18.597] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:14:18.603] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:14:18.603] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:14:18.608] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:14:18.614] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:14:18.614] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:14:18.619] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:14:18.625] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:14:18.625] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:14:18.630] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:14:18.630] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:14:18.636] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:14:18.641] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:14:18.647] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:14:18.647] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:14:18.653] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:14:18.658] D (395) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:14:18.658] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:14:18.664] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:14:18.670] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:14:18.670] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:14:18.675] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:14:18.675] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:14:18.680] D (420) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:14:18.686] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:14:18.686] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:14:18.691] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:14:18.691] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:14:18.697] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:14:18.703] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:14:18.703] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:14:18.708] I (449) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:14:18.714] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:14:18.719] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:14:18.725] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:14:18.731] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:14:18.736] I (476) wifi: sleep enable
+[2018-06-24 12:14:18.736] I (477) wifi: type: 1
+[2018-06-24 12:14:18.741] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:14:18.741] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:14:18.753] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:14:18.753] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:14:18.758] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:14:18.764] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:14:18.764] D (512) nvs: nvs_close 3
+[2018-06-24 12:14:18.769] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:14:18.775] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:14:18.780] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:14:18.786] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:14:18.786] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:14:18.791] 
+[2018-06-24 12:14:18.791] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:14:18.798] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:14:18.803] 
+[2018-06-24 12:14:18.803] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:14:18.808] D (550) SYS: mDNS init
+[2018-06-24 12:14:18.814] D (553) SYS: Heat controller creation
+[2018-06-24 12:14:18.819] D (556) SYS: MQTT Client init
+[2018-06-24 12:14:18.819] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:14:18.825] D (564) SYS: System startup done
+[2018-06-24 12:14:18.835] D (561) HEATC: Temperature: 25.59
+[2018-06-24 12:14:18.835] 
+[2018-06-24 12:14:18.835] D (583) HEATC: Valve init
+[2018-06-24 12:14:18.840] 
+[2018-06-24 12:14:18.840] D (584) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:14:18.846] D (584) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:14:18.846] D (587) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:14:18.920] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:14:19.762] I (1509) wifi: state: init -> auth (b0)
+[2018-06-24 12:14:19.768] I (1515) wifi: state: auth -> assoc (0)
+[2018-06-24 12:14:19.774] I (1520) wifi: state: assoc -> run (10)
+[2018-06-24 12:14:19.797] I (1544) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:14:19.797] D (1545) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:14:19.808] D (1550) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:14:19.813] 
+[2018-06-24 12:14:19.813] D (1555) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:14:19.819] D (1561) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:14:19.824] 
+[2018-06-24 12:14:19.824] D (1566) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:14:19.830] 
+[2018-06-24 12:14:19.830] D (1572) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:14:19.836] D (1578) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:14:19.841] D (1583) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:14:19.852] D (1593) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:14:19.858] D (1597) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:14:19.863] D (1603) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:14:19.868] 
+[2018-06-24 12:14:22.773] I (4521) wifi: pm start, type:1
+[2018-06-24 12:14:22.773] 
+[2018-06-24 12:14:24.600] D (6346) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:14:24.600] D (6347) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:14:24.605] D (6348) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:14:24.616] I (6352) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:14:24.622] I (6360) WLAN: got ip:192.168.0.146
+[2018-06-24 12:14:24.627] I (6364) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:14:24.633] I (6369) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:14:24.754] I (6500) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:14:24.759] I (6506) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:14:24.882] I (6629) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:14:24.887] I (6630) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:14:24.893] D (6631) HEATC: Target temperature set to 19.0
+[2018-06-24 12:14:24.899] I (6636) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:14:24.904] I (6646) MQTT: Publish: "43.8" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:14:24.910] I (6652) wifi: state: run -> init (0)
+[2018-06-24 12:14:24.915] I (6654) wifi: pm stop, total sleep time: 18543/2132964
+[2018-06-24 12:14:24.921] 
+[2018-06-24 12:14:24.921] I (6654) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:14:24.926] D (6665) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:14:24.937] D (6674) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:14:24.943] 
+[2018-06-24 12:14:24.943] I (6674) wifi: flush txq
+[2018-06-24 12:14:24.943] D (6680) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:14:24.949] I (6682) wifi: stop sw txq
+[2018-06-24 12:14:24.949] D (6687) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:14:24.954] I (6689) wifi: lmac stop hw txq
+[2018-06-24 12:14:24.960] D (6695) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:14:24.965] D (6698) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:14:24.971] D (6708) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:14:24.976] 
+[2018-06-24 12:14:24.976] E (6714) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:14:24.976] D (6718) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:14:24.982] D (6722) SYS: Enter deep sleep
+[2018-06-24 12:14:24.987] D (6722) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:14:24.993] 
+[2018-06-24 12:14:24.993] D (6730) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:14:24.999] D (6736) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:14:25.004] 
+[2018-06-24 12:14:25.004] D (6742) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:15:14.744] ets Jun  8 2016 00:22:57
+[2018-06-24 12:15:14.744] 
+[2018-06-24 12:15:14.744] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:15:14.749] configsip: 0, SPIWP:0xee
+[2018-06-24 12:15:14.749] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:15:14.754] mode:DIO, clock div:2
+[2018-06-24 12:15:14.760] load:0x3fff0018,len:4
+[2018-06-24 12:15:14.760] load:0x3fff001c,len:5520
+[2018-06-24 12:15:14.765] ho 0 tail 12 room 4
+[2018-06-24 12:15:14.765] load:0x40078000,len:0
+[2018-06-24 12:15:14.765] load:0x40078000,len:12488
+[2018-06-24 12:15:14.773] entry 0x40078fd4
+[2018-06-24 12:15:14.773] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:15:14.778] I (30) boot: compile time 11:17:11
+[2018-06-24 12:15:14.784] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:15:14.790] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:15:14.790] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:15:14.795] I (43) boot: SPI Flash Size : 4MB
+[2018-06-24 12:15:14.801] I (48) boot: Partition Table:
+[2018-06-24 12:15:14.806] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:15:14.812] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:15:14.818] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:15:14.828] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:15:14.834] I (81) boot: End of partition table
+[2018-06-24 12:15:14.840] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:15:14.865] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:15:14.871] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:15:14.882] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:15:14.896] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:15:15.033] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:15:15.049] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:15:15.054] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:15:15.065] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:15:15.071] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:15:15.076] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:15:15.076] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:15:15.087] I (0) cpu_start: App cpu up.
+[2018-06-24 12:15:15.087] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:15:15.093] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:15:15.104] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:15:15.104] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:15:15.115] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:15:15.121] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:15:15.126] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:15:15.132] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:15:15.138] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:15:15.143] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:15:15.149] D (402) clk: RTC_SLOW_CLK calibration value: 3347469
+[2018-06-24 12:15:15.157] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:15:15.157] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:15:15.163] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:15:15.168] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:15:15.174] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:15:15.179] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:15:15.185] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:15:15.191] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:15:15.196] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:15:15.202] D (122) SYS: Starting up...
+[2018-06-24 12:15:15.202] D (125) SYS: Chip init
+[2018-06-24 12:15:15.207] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:15:15.231] D (161) SYS: Board/Hardware init
+[2018-06-24 12:15:15.231] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.242] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.254] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.259] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.270] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.281] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.287] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.298] I (218) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.309] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.315] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:15:15.326] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:15:15.331] D (252) SYS: I2C Init
+[2018-06-24 12:15:15.331] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:15:15.337] D (259) SYS: Pre-Task init
+[2018-06-24 12:15:15.342] D (262) SYS: WiFi init
+[2018-06-24 12:15:15.342] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:15:15.348] 
+[2018-06-24 12:15:15.348] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:15:15.354] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:15:15.359] 
+[2018-06-24 12:15:15.359] D (281) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:15:15.365] D (285) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:15:15.365] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:15:15.370] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:15:15.376] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:15:15.381] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:15:15.387] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:15:15.398] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:15:15.404] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:15:15.404] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:15:15.409] D (332) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:15:15.415] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:15:15.420] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:15:15.420] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:15:15.426] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:15:15.431] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:15:15.431] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:15:15.437] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:15:15.442] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:15:15.442] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:15:15.448] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:15:15.448] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:15:15.454] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:15:15.459] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:15:15.465] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:15:15.465] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:15:15.470] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:15:15.476] D (395) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:15:15.476] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:15:15.481] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:15:15.487] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:15:15.487] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:15:15.492] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:15:15.492] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:15:15.501] D (420) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:15:15.504] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:15:15.504] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:15:15.513] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:15:15.513] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:15:15.515] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:15:15.520] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:15:15.520] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:15:15.526] I (449) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:15:15.531] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:15:15.537] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:15:15.542] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:15:15.548] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:15:15.554] I (476) wifi: sleep enable
+[2018-06-24 12:15:15.554] I (477) wifi: type: 1
+[2018-06-24 12:15:15.560] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:15:15.560] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:15:15.571] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:15:15.571] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:15:15.576] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:15:15.582] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:15:15.582] D (512) nvs: nvs_close 3
+[2018-06-24 12:15:15.587] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:15:15.593] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:15:15.599] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:15:15.604] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:15:15.604] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:15:15.609] 
+[2018-06-24 12:15:15.609] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:15:15.615] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:15:15.621] 
+[2018-06-24 12:15:15.621] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:15:15.626] D (550) SYS: mDNS init
+[2018-06-24 12:15:15.632] D (553) SYS: Heat controller creation
+[2018-06-24 12:15:15.637] D (556) SYS: MQTT Client init
+[2018-06-24 12:15:15.637] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:15:15.643] D (564) SYS: System startup done
+[2018-06-24 12:15:15.653] D (561) HEATC: Temperature: 25.60
+[2018-06-24 12:15:15.653] 
+[2018-06-24 12:15:15.653] D (582) HEATC: Valve init
+[2018-06-24 12:15:15.658] 
+[2018-06-24 12:15:15.658] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:15:15.663] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:15:15.663] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:15:15.738] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:15:16.580] I (1509) wifi: state: init -> auth (b0)
+[2018-06-24 12:15:16.586] I (1514) wifi: state: auth -> assoc (0)
+[2018-06-24 12:15:16.592] I (1519) wifi: state: assoc -> run (10)
+[2018-06-24 12:15:16.619] I (1548) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:15:16.619] D (1549) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:15:16.630] D (1554) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:15:16.636] 
+[2018-06-24 12:15:16.636] D (1559) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:15:16.641] D (1565) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:15:16.646] 
+[2018-06-24 12:15:16.646] D (1570) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:15:16.652] 
+[2018-06-24 12:15:16.652] D (1576) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:15:16.658] D (1582) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:15:16.663] D (1587) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:15:16.675] D (1597) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:15:16.680] D (1601) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:15:16.686] D (1607) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:15:16.690] 
+[2018-06-24 12:15:18.916] D (3845) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:15:18.916] D (3846) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:15:18.922] D (3847) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:15:18.933] I (3851) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:15:18.938] I (3859) WLAN: got ip:192.168.0.146
+[2018-06-24 12:15:18.944] I (3863) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:15:18.949] I (3868) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:15:18.980] I (3909) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:15:18.985] I (3914) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:15:19.192] I (4121) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:15:19.197] I (4122) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:15:19.203] D (4123) HEATC: Target temperature set to 19.0
+[2018-06-24 12:15:19.208] I (4128) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:15:19.214] I (4139) MQTT: Publish: "44.0" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:15:19.219] I (4144) wifi: state: run -> init (0)
+[2018-06-24 12:15:19.225] I (4146) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:15:19.231] D (4152) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:15:19.243] D (4161) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:15:19.270] 
+[2018-06-24 12:15:19.270] I (4162) wifi: flush txq
+[2018-06-24 12:15:19.270] D (4167) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:15:19.270] I (4169) wifi: stop sw txq
+[2018-06-24 12:15:19.270] D (4174) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:15:19.273] I (4177) wifi: lmac stop hw txq
+[2018-06-24 12:15:19.273] D (4182) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:15:19.273] D (4185) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:15:19.275] D (4195) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:15:19.281] 
+[2018-06-24 12:15:19.281] E (4201) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:15:19.286] D (4205) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:15:19.286] D (4209) SYS: Enter deep sleep
+[2018-06-24 12:15:19.292] D (4209) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:15:19.297] 
+[2018-06-24 12:15:19.297] D (4218) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:15:19.303] D (4223) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:15:19.308] 
+[2018-06-24 12:15:19.308] D (4229) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:16:09.000] ets Jun  8 2016 00:22:57
+[2018-06-24 12:16:09.000] 
+[2018-06-24 12:16:09.000] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:16:09.006] configsip: 0, SPIWP:0xee
+[2018-06-24 12:16:09.006] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:16:09.011] mode:DIO, clock div:2
+[2018-06-24 12:16:09.017] load:0x3fff0018,len:4
+[2018-06-24 12:16:09.017] load:0x3fff001c,len:5520
+[2018-06-24 12:16:09.022] ho 0 tail 12 room 4
+[2018-06-24 12:16:09.022] load:0x40078000,len:0
+[2018-06-24 12:16:09.022] load:0x40078000,len:12488
+[2018-06-24 12:16:09.030] entry 0x40078fd4
+[2018-06-24 12:16:09.030] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:16:09.035] I (30) boot: compile time 11:17:11
+[2018-06-24 12:16:09.040] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:16:09.046] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:16:09.046] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:16:09.052] I (44) boot: SPI Flash Size : 4MB
+[2018-06-24 12:16:09.057] I (48) boot: Partition Table:
+[2018-06-24 12:16:09.063] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:16:09.068] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:16:09.074] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:16:09.085] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:16:09.091] I (81) boot: End of partition table
+[2018-06-24 12:16:09.096] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:16:09.122] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:16:09.128] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:16:09.139] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:16:09.153] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:16:09.290] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:16:09.306] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:16:09.311] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:16:09.322] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:16:09.328] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:16:09.333] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:16:09.333] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:16:09.344] I (0) cpu_start: App cpu up.
+[2018-06-24 12:16:09.344] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:16:09.350] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:16:09.361] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:16:09.361] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:16:09.372] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:16:09.377] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:16:09.383] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:16:09.389] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:16:09.394] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:16:09.400] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:16:09.405] D (402) clk: RTC_SLOW_CLK calibration value: 3344090
+[2018-06-24 12:16:09.414] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:16:09.414] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:16:09.419] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:16:09.425] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:16:09.431] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:16:09.436] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:16:09.442] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:16:09.447] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:16:09.453] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:16:09.458] D (122) SYS: Starting up...
+[2018-06-24 12:16:09.458] D (125) SYS: Chip init
+[2018-06-24 12:16:09.464] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:16:09.488] D (161) SYS: Board/Hardware init
+[2018-06-24 12:16:09.488] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.499] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.510] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.516] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.527] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.538] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.544] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.555] I (218) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.566] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.572] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:16:09.582] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:16:09.588] D (252) SYS: I2C Init
+[2018-06-24 12:16:09.588] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:16:09.594] D (259) SYS: Pre-Task init
+[2018-06-24 12:16:09.599] D (262) SYS: WiFi init
+[2018-06-24 12:16:09.599] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:16:09.605] 
+[2018-06-24 12:16:09.605] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:16:09.610] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:16:09.616] 
+[2018-06-24 12:16:09.616] D (281) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:16:09.621] D (285) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:16:09.621] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:16:09.627] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:16:09.632] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:16:09.638] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:16:09.644] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:16:09.655] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:16:09.660] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:16:09.660] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:16:09.666] D (332) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:16:09.672] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:16:09.677] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:16:09.677] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:16:09.683] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:16:09.688] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:16:09.688] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:16:09.694] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:16:09.699] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:16:09.699] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:16:09.705] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:16:09.705] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:16:09.710] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:16:09.716] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:16:09.721] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:16:09.721] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:16:09.727] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:16:09.733] D (395) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:16:09.733] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:16:09.738] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:16:09.744] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:16:09.744] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:16:09.749] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:16:09.749] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:16:09.755] D (420) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:16:09.760] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:16:09.760] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:16:09.766] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:16:09.766] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:16:09.772] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:16:09.777] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:16:09.777] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:16:09.782] I (449) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:16:09.788] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:16:09.794] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:16:09.799] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:16:09.805] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:16:09.810] I (476) wifi: sleep enable
+[2018-06-24 12:16:09.810] I (477) wifi: type: 1
+[2018-06-24 12:16:09.816] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:16:09.816] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:16:09.827] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:16:09.827] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:16:09.832] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:16:09.838] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:16:09.838] D (512) nvs: nvs_close 3
+[2018-06-24 12:16:09.844] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:16:09.849] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:16:09.855] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:16:09.860] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:16:09.860] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:16:09.866] 
+[2018-06-24 12:16:09.866] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:16:09.871] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:16:09.877] 
+[2018-06-24 12:16:09.877] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:16:09.882] D (550) SYS: mDNS init
+[2018-06-24 12:16:09.888] D (553) SYS: Heat controller creation
+[2018-06-24 12:16:09.894] D (556) SYS: MQTT Client init
+[2018-06-24 12:16:09.894] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:16:09.899] D (564) SYS: System startup done
+[2018-06-24 12:16:09.909] D (561) HEATC: Temperature: 25.60
+[2018-06-24 12:16:09.909] 
+[2018-06-24 12:16:09.909] D (582) HEATC: Valve init
+[2018-06-24 12:16:09.914] 
+[2018-06-24 12:16:09.914] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:16:09.920] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:16:09.920] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:16:09.994] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:16:10.837] I (1509) wifi: state: init -> auth (b0)
+[2018-06-24 12:16:10.837] I (1513) wifi: state: auth -> assoc (0)
+[2018-06-24 12:16:10.846] I (1518) wifi: state: assoc -> run (10)
+[2018-06-24 12:16:10.879] I (1551) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:16:10.879] D (1552) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:16:10.889] D (1557) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:16:10.895] 
+[2018-06-24 12:16:10.895] D (1562) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:16:10.901] D (1567) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:16:10.906] 
+[2018-06-24 12:16:10.906] D (1573) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:16:10.912] 
+[2018-06-24 12:16:10.912] D (1579) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:16:10.917] D (1584) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:16:10.923] D (1589) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:16:10.934] D (1600) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:16:10.939] D (1604) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:16:10.945] D (1610) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:16:10.950] 
+[2018-06-24 12:16:13.845] I (4518) wifi: pm start, type:1
+[2018-06-24 12:16:13.845] 
+[2018-06-24 12:16:19.173] D (9845) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:16:19.173] D (9846) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:16:19.179] D (9847) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:16:19.190] I (9851) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:16:19.195] I (9859) WLAN: got ip:192.168.0.146
+[2018-06-24 12:16:19.201] I (9863) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:16:19.206] I (9868) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:16:19.268] I (9940) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:16:19.277] I (9947) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:16:19.453] I (10125) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:16:19.459] I (10126) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:16:19.464] D (10127) HEATC: Target temperature set to 19.0
+[2018-06-24 12:16:19.470] I (10132) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:16:19.476] I (10143) MQTT: Publish: "44.0" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:16:19.481] I (10149) wifi: state: run -> init (0)
+[2018-06-24 12:16:19.486] I (10151) wifi: pm stop, total sleep time: 4741799/5631885
+[2018-06-24 12:16:19.492] 
+[2018-06-24 12:16:19.492] I (10151) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:16:19.497] D (10162) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:16:19.508] D (10171) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:16:19.514] 
+[2018-06-24 12:16:19.514] I (10172) wifi: flush txq
+[2018-06-24 12:16:19.514] D (10177) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:16:19.520] I (10179) wifi: stop sw txq
+[2018-06-24 12:16:19.525] D (10184) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:16:19.530] I (10187) wifi: lmac stop hw txq
+[2018-06-24 12:16:19.530] D (10193) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:16:19.536] D (10196) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:16:19.542] D (10206) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:16:19.547] 
+[2018-06-24 12:16:19.547] E (10212) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:16:19.553] D (10216) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:16:19.553] D (10220) SYS: Enter deep sleep
+[2018-06-24 12:16:19.558] D (10220) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:16:19.564] 
+[2018-06-24 12:16:19.564] D (10229) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:16:19.570] D (10235) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:16:19.575] 
+[2018-06-24 12:16:19.575] D (10241) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:17:09.321] ets Jun  8 2016 00:22:57
+[2018-06-24 12:17:09.321] 
+[2018-06-24 12:17:09.321] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:17:09.326] configsip: 0, SPIWP:0xee
+[2018-06-24 12:17:09.326] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:17:09.332] mode:DIO, clock div:2
+[2018-06-24 12:17:09.337] load:0x3fff0018,len:4
+[2018-06-24 12:17:09.337] load:0x3fff001c,len:5520
+[2018-06-24 12:17:09.343] ho 0 tail 12 room 4
+[2018-06-24 12:17:09.343] load:0x40078000,len:0
+[2018-06-24 12:17:09.343] load:0x40078000,len:12488
+[2018-06-24 12:17:09.350] entry 0x40078fd4
+[2018-06-24 12:17:09.350] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:17:09.356] I (30) boot: compile time 11:17:11
+[2018-06-24 12:17:09.361] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:17:09.367] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:17:09.367] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:17:09.373] I (44) boot: SPI Flash Size : 4MB
+[2018-06-24 12:17:09.378] I (48) boot: Partition Table:
+[2018-06-24 12:17:09.384] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:17:09.389] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:17:09.395] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:17:09.406] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:17:09.411] I (81) boot: End of partition table
+[2018-06-24 12:17:09.417] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:17:09.443] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:17:09.448] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:17:09.459] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:17:09.474] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:17:09.611] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:17:09.626] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:17:09.632] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:17:09.643] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:17:09.648] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:17:09.654] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:17:09.654] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:17:09.665] I (0) cpu_start: App cpu up.
+[2018-06-24 12:17:09.665] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:17:09.670] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:17:09.682] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:17:09.682] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:17:09.693] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:17:09.698] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:17:09.704] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:17:09.710] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:17:09.715] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:17:09.720] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:17:09.726] D (402) clk: RTC_SLOW_CLK calibration value: 3346765
+[2018-06-24 12:17:09.735] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:17:09.735] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:17:09.740] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:17:09.746] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:17:09.752] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:17:09.757] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:17:09.763] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:17:09.768] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:17:09.774] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:17:09.780] D (122) SYS: Starting up...
+[2018-06-24 12:17:09.780] D (125) SYS: Chip init
+[2018-06-24 12:17:09.785] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:17:09.810] D (161) SYS: Board/Hardware init
+[2018-06-24 12:17:09.810] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.820] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.832] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.837] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.848] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.860] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.865] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.876] I (219) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.887] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.893] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:17:09.904] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:17:09.909] D (252) SYS: I2C Init
+[2018-06-24 12:17:09.909] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:17:09.915] D (259) SYS: Pre-Task init
+[2018-06-24 12:17:09.920] D (262) SYS: WiFi init
+[2018-06-24 12:17:09.920] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:17:09.926] 
+[2018-06-24 12:17:09.926] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:17:09.931] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:17:09.937] 
+[2018-06-24 12:17:09.937] D (282) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:17:09.943] D (286) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:17:09.943] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:17:09.948] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:17:09.954] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:17:09.959] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:17:09.965] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:17:09.976] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:17:09.981] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:17:09.981] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:17:09.987] D (333) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:17:09.993] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:17:09.998] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:17:09.998] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:17:10.004] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:17:10.009] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:17:10.009] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:17:10.015] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:17:10.020] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:17:10.020] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:17:10.026] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:17:10.026] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:17:10.031] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:17:10.037] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:17:10.043] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:17:10.043] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:17:10.048] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:17:10.053] D (396) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:17:10.054] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:17:10.059] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:17:10.065] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:17:10.065] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:17:10.070] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:17:10.070] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:17:10.076] D (421) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:17:10.082] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:17:10.082] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:17:10.087] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:17:10.087] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:17:10.093] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:17:10.098] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:17:10.098] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:17:10.104] I (450) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:17:10.109] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:17:10.115] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:17:10.120] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:17:10.126] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:17:10.132] I (476) wifi: sleep enable
+[2018-06-24 12:17:10.132] I (477) wifi: type: 1
+[2018-06-24 12:17:10.137] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:17:10.137] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:17:10.148] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:17:10.148] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:17:10.154] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:17:10.159] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:17:10.159] D (512) nvs: nvs_close 3
+[2018-06-24 12:17:10.165] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:17:10.170] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:17:10.176] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:17:10.181] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:17:10.181] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:17:10.187] 
+[2018-06-24 12:17:10.187] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:17:10.193] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:17:10.198] 
+[2018-06-24 12:17:10.198] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:17:10.204] D (550) SYS: mDNS init
+[2018-06-24 12:17:10.209] D (553) SYS: Heat controller creation
+[2018-06-24 12:17:10.215] D (556) SYS: MQTT Client init
+[2018-06-24 12:17:10.215] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:17:10.220] D (564) SYS: System startup done
+[2018-06-24 12:17:10.230] D (561) HEATC: Temperature: 25.59
+[2018-06-24 12:17:10.230] 
+[2018-06-24 12:17:10.230] D (582) HEATC: Valve init
+[2018-06-24 12:17:10.235] 
+[2018-06-24 12:17:10.235] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:17:10.241] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:17:10.241] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:17:10.315] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:17:11.158] I (1510) wifi: state: init -> auth (b0)
+[2018-06-24 12:17:11.158] I (1513) wifi: state: auth -> assoc (0)
+[2018-06-24 12:17:11.167] I (1518) wifi: state: assoc -> run (10)
+[2018-06-24 12:17:11.198] I (1550) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:17:11.198] D (1551) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:17:11.209] D (1556) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:17:11.215] 
+[2018-06-24 12:17:11.215] D (1561) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:17:11.221] D (1566) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:17:11.226] 
+[2018-06-24 12:17:11.226] D (1572) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:17:11.231] 
+[2018-06-24 12:17:11.231] D (1578) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:17:11.237] D (1583) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:17:11.242] D (1588) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:17:11.254] D (1599) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:17:11.259] D (1603) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:17:11.265] D (1609) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:17:11.270] 
+[2018-06-24 12:17:14.166] I (4519) wifi: pm start, type:1
+[2018-06-24 12:17:14.166] 
+[2018-06-24 12:17:20.280] I (10631) wifi: state: run -> init (0)
+[2018-06-24 12:17:20.280] I (10633) wifi: pm stop, total sleep time: 5201698/6113845
+[2018-06-24 12:17:20.285] 
+[2018-06-24 12:17:20.285] I (10633) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:17:20.291] W (10635) wifi: tx null, bss is null
+[2018-06-24 12:17:20.297] D (10639) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:17:20.307] D (10649) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:17:20.313] 
+[2018-06-24 12:17:20.313] I (10649) wifi: flush txq
+[2018-06-24 12:17:20.313] D (10654) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:17:20.319] I (10657) wifi: stop sw txq
+[2018-06-24 12:17:20.319] D (10662) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:17:20.330] I (10665) wifi: lmac stop hw txq
+[2018-06-24 12:17:20.335] D (10674) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:17:20.342] D (10677) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:17:20.342] D (10687) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:17:20.347] 
+[2018-06-24 12:17:20.347] D (10693) SYS: Enter deep sleep
+[2018-06-24 12:17:20.352] E (10694) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:17:20.357] D (10697) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+[2018-06-24 12:17:20.363] D (10702) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:17:20.369] D (10712) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:17:20.374] 
+[2018-06-24 12:17:20.374] D (10717) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:17:20.380] D (10724) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:17:20.384] 
+
+[2018-06-24 12:18:10.096] ets Jun  8 2016 00:22:57
+[2018-06-24 12:18:10.096] 
+[2018-06-24 12:18:10.096] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:18:10.102] configsip: 0, SPIWP:0xee
+[2018-06-24 12:18:10.102] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:18:10.108] mode:DIO, clock div:2
+[2018-06-24 12:18:10.113] load:0x3fff0018,len:4
+[2018-06-24 12:18:10.113] load:0x3fff001c,len:5520
+[2018-06-24 12:18:10.118] ho 0 tail 12 room 4
+[2018-06-24 12:18:10.118] load:0x40078000,len:0
+[2018-06-24 12:18:10.118] load:0x40078000,len:12488
+[2018-06-24 12:18:10.126] entry 0x40078fd4
+[2018-06-24 12:18:10.126] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:18:10.131] I (30) boot: compile time 11:17:11
+[2018-06-24 12:18:10.137] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:18:10.143] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:18:10.143] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:18:10.148] I (43) boot: SPI Flash Size : 4MB
+[2018-06-24 12:18:10.154] I (48) boot: Partition Table:
+[2018-06-24 12:18:10.159] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:18:10.165] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:18:10.170] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:18:10.181] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:18:10.187] I (81) boot: End of partition table
+[2018-06-24 12:18:10.193] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:18:10.218] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:18:10.224] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:18:10.235] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:18:10.249] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:18:10.386] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:18:10.402] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:18:10.407] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:18:10.418] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:18:10.424] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:18:10.429] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:18:10.429] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:18:10.440] I (0) cpu_start: App cpu up.
+[2018-06-24 12:18:10.440] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:18:10.446] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:18:10.457] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:18:10.457] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:18:10.468] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:18:10.474] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:18:10.479] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:18:10.485] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:18:10.490] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:18:10.496] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:18:10.502] D (402) clk: RTC_SLOW_CLK calibration value: 3347699
+[2018-06-24 12:18:10.510] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:18:10.510] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:18:10.516] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:18:10.521] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:18:10.527] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:18:10.532] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:18:10.538] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:18:10.543] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:18:10.549] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:18:10.555] D (122) SYS: Starting up...
+[2018-06-24 12:18:10.555] D (125) SYS: Chip init
+[2018-06-24 12:18:10.560] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:18:10.584] D (161) SYS: Board/Hardware init
+[2018-06-24 12:18:10.584] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.595] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.607] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.612] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.623] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.634] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.640] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.651] I (218) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.662] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.668] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:18:10.679] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:18:10.684] D (252) SYS: I2C Init
+[2018-06-24 12:18:10.684] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:18:10.690] D (259) SYS: Pre-Task init
+[2018-06-24 12:18:10.695] D (262) SYS: WiFi init
+[2018-06-24 12:18:10.695] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:18:10.701] 
+[2018-06-24 12:18:10.701] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:18:10.706] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:18:10.712] 
+[2018-06-24 12:18:10.712] D (281) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:18:10.718] D (285) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:18:10.718] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:18:10.723] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:18:10.729] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:18:10.734] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:18:10.740] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:18:10.751] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:18:10.756] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:18:10.756] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:18:10.762] D (332) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:18:10.768] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:18:10.773] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:18:10.773] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:18:10.779] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:18:10.784] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:18:10.784] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:18:10.790] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:18:10.795] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:18:10.795] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:18:10.801] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:18:10.801] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:18:10.806] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:18:10.812] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:18:10.818] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:18:10.818] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:18:10.823] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:18:10.829] D (395) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:18:10.829] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:18:10.834] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:18:10.840] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:18:10.840] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:18:10.845] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:18:10.845] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:18:10.851] D (420) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:18:10.856] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:18:10.856] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:18:10.862] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:18:10.862] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:18:10.868] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:18:10.873] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:18:10.873] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:18:10.879] I (449) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:18:10.884] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:18:10.890] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:18:10.895] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:18:10.901] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:18:10.907] I (476) wifi: sleep enable
+[2018-06-24 12:18:10.907] I (477) wifi: type: 1
+[2018-06-24 12:18:10.912] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:18:10.912] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:18:10.923] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:18:10.923] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:18:10.929] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:18:10.934] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:18:10.934] D (512) nvs: nvs_close 3
+[2018-06-24 12:18:10.940] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:18:10.945] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:18:10.951] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:18:10.957] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:18:10.957] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:18:10.962] 
+[2018-06-24 12:18:10.962] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:18:10.968] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:18:10.973] 
+[2018-06-24 12:18:10.973] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:18:10.979] D (550) SYS: mDNS init
+[2018-06-24 12:18:10.984] D (553) SYS: Heat controller creation
+[2018-06-24 12:18:10.990] D (556) SYS: MQTT Client init
+[2018-06-24 12:18:10.990] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:18:10.995] D (564) SYS: System startup done
+[2018-06-24 12:18:11.005] D (561) HEATC: Temperature: 25.60
+[2018-06-24 12:18:11.005] 
+[2018-06-24 12:18:11.005] D (582) HEATC: Valve init
+[2018-06-24 12:18:11.011] 
+[2018-06-24 12:18:11.011] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:18:11.016] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:18:11.016] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:18:11.090] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:18:11.933] I (1509) wifi: state: init -> auth (b0)
+[2018-06-24 12:18:11.933] I (1513) wifi: state: auth -> assoc (0)
+[2018-06-24 12:18:11.942] I (1518) wifi: state: assoc -> run (10)
+[2018-06-24 12:18:11.967] I (1543) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:18:11.967] D (1544) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:18:11.978] D (1549) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:18:11.983] 
+[2018-06-24 12:18:11.983] D (1554) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:18:11.989] D (1560) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:18:11.994] 
+[2018-06-24 12:18:11.994] D (1565) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:18:12.000] 
+[2018-06-24 12:18:12.000] D (1571) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:18:12.005] D (1577) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:18:12.011] D (1582) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:18:12.022] D (1592) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:18:12.028] D (1596) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:18:12.033] D (1602) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:18:12.038] 
+[2018-06-24 12:18:14.268] D (3844) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:18:14.268] D (3845) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:18:14.274] D (3845) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:18:14.285] I (3850) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:18:14.290] I (3858) WLAN: got ip:192.168.0.146
+[2018-06-24 12:18:14.296] I (3862) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:18:14.302] I (3867) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:18:14.354] I (3930) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:18:14.364] I (3941) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:18:14.542] I (4119) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:18:14.548] I (4120) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:18:14.553] D (4121) HEATC: Target temperature set to 19.0
+[2018-06-24 12:18:14.559] I (4126) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:18:14.564] I (4136) MQTT: Publish: "44.1" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:18:14.570] I (4142) wifi: state: run -> init (0)
+[2018-06-24 12:18:14.576] I (4144) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:18:14.581] D (4150) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:18:14.592] D (4159) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:18:14.598] 
+[2018-06-24 12:18:14.598] I (4159) wifi: flush txq
+[2018-06-24 12:18:14.598] D (4165) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:18:14.603] I (4167) wifi: stop sw txq
+[2018-06-24 12:18:14.603] D (4172) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:18:14.609] I (4174) wifi: lmac stop hw txq
+[2018-06-24 12:18:14.614] D (4180) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:18:14.620] D (4183) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:18:14.626] D (4193) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:18:14.631] 
+[2018-06-24 12:18:14.631] E (4198) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:18:14.636] D (4203) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:18:14.636] D (4207) SYS: Enter deep sleep
+[2018-06-24 12:18:14.642] D (4207) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:18:14.648] 
+[2018-06-24 12:18:14.648] D (4215) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:18:14.653] D (4221) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:18:14.659] 
+[2018-06-24 12:18:14.659] D (4227) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:19:04.343] ets Jun  8 2016 00:22:57
+[2018-06-24 12:19:04.343] 
+[2018-06-24 12:19:04.343] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:19:04.348] configsip: 0, SPIWP:0xee
+[2018-06-24 12:19:04.348] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:19:04.353] mode:DIO, clock div:2
+[2018-06-24 12:19:04.359] load:0x3fff0018,len:4
+[2018-06-24 12:19:04.359] load:0x3fff001c,len:5520
+[2018-06-24 12:19:04.364] ho 0 tail 12 room 4
+[2018-06-24 12:19:04.364] load:0x40078000,len:0
+[2018-06-24 12:19:04.364] load:0x40078000,len:12488
+[2018-06-24 12:19:04.372] entry 0x40078fd4
+[2018-06-24 12:19:04.372] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:19:04.377] I (30) boot: compile time 11:17:11
+[2018-06-24 12:19:04.383] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:19:04.388] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:19:04.388] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:19:04.394] I (43) boot: SPI Flash Size : 4MB
+[2018-06-24 12:19:04.400] I (48) boot: Partition Table:
+[2018-06-24 12:19:04.405] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:19:04.411] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:19:04.416] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:19:04.427] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:19:04.433] I (81) boot: End of partition table
+[2018-06-24 12:19:04.439] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:19:04.464] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:19:04.470] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:19:04.481] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:19:04.495] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:19:04.632] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:19:04.648] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:19:04.653] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:19:04.664] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:19:04.670] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:19:04.675] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:19:04.675] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:19:04.686] I (0) cpu_start: App cpu up.
+[2018-06-24 12:19:04.686] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:19:04.692] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:19:04.703] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:19:04.703] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:19:04.714] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:19:04.720] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:19:04.725] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:19:04.731] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:19:04.737] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:19:04.742] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:19:04.748] D (402) clk: RTC_SLOW_CLK calibration value: 3345101
+[2018-06-24 12:19:04.756] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:19:04.756] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:19:04.762] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:19:04.767] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:19:04.773] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:19:04.778] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:19:04.784] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:19:04.789] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:19:04.795] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:19:04.801] D (122) SYS: Starting up...
+[2018-06-24 12:19:04.801] D (125) SYS: Chip init
+[2018-06-24 12:19:04.806] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:19:04.831] D (161) SYS: Board/Hardware init
+[2018-06-24 12:19:04.831] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.841] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.853] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.858] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.869] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.880] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.886] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.897] I (218) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.908] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.914] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:19:04.925] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:19:04.930] D (252) SYS: I2C Init
+[2018-06-24 12:19:04.930] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:19:04.936] D (259) SYS: Pre-Task init
+[2018-06-24 12:19:04.941] D (262) SYS: WiFi init
+[2018-06-24 12:19:04.941] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:19:04.947] 
+[2018-06-24 12:19:04.947] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:19:04.953] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:19:04.958] 
+[2018-06-24 12:19:04.958] D (281) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:19:04.964] D (285) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:19:04.964] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:19:04.969] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:19:04.975] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:19:04.980] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:19:04.986] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:19:04.997] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:19:05.003] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:19:05.003] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:19:05.008] D (332) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:19:05.014] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:19:05.019] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:19:05.019] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:19:05.025] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:19:05.030] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:19:05.030] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:19:05.036] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:19:05.041] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:19:05.041] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:19:05.047] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:19:05.047] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:19:05.053] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:19:05.058] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:19:05.064] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:19:05.064] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:19:05.069] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:19:05.075] D (395) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:19:05.075] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:19:05.081] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:19:05.086] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:19:05.086] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:19:05.091] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:19:05.091] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:19:05.097] D (420) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:19:05.103] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:19:05.103] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:19:05.108] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:19:05.108] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:19:05.114] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:19:05.119] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:19:05.119] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:19:05.125] I (449) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:19:05.130] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:19:05.136] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:19:05.141] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:19:05.147] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:19:05.153] I (476) wifi: sleep enable
+[2018-06-24 12:19:05.153] I (477) wifi: type: 1
+[2018-06-24 12:19:05.158] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:19:05.158] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:19:05.169] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:19:05.169] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:19:05.175] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:19:05.180] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:19:05.180] D (512) nvs: nvs_close 3
+[2018-06-24 12:19:05.186] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:19:05.191] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:19:05.197] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:19:05.203] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:19:05.203] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:19:05.208] 
+[2018-06-24 12:19:05.208] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:19:05.214] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:19:05.219] 
+[2018-06-24 12:19:05.219] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:19:05.225] D (550) SYS: mDNS init
+[2018-06-24 12:19:05.230] D (553) SYS: Heat controller creation
+[2018-06-24 12:19:05.236] D (556) SYS: MQTT Client init
+[2018-06-24 12:19:05.236] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:19:05.241] D (564) SYS: System startup done
+[2018-06-24 12:19:05.251] D (561) HEATC: Temperature: 25.59
+[2018-06-24 12:19:05.251] 
+[2018-06-24 12:19:05.251] D (582) HEATC: Valve init
+[2018-06-24 12:19:05.256] 
+[2018-06-24 12:19:05.256] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:19:05.262] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:19:05.262] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:19:07.624] D (2954) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:00:00:00:00:00:00, reason:201
+[2018-06-24 12:19:07.629] D (2955) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:19:07.635] 
+[2018-06-24 12:19:07.635] D (2960) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:19:07.640] D (2965) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:19:07.651] D (2974) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:19:07.657] D (2980) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:19:07.662] 
+[2018-06-24 12:19:07.778] I (3107) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:19:08.621] I (3952) wifi: state: init -> auth (b0)
+[2018-06-24 12:19:08.637] I (3967) wifi: state: auth -> assoc (0)
+[2018-06-24 12:19:08.643] I (3972) wifi: state: assoc -> run (10)
+[2018-06-24 12:19:08.677] I (4008) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:19:08.677] D (4009) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:19:08.688] D (4013) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:19:08.694] 
+[2018-06-24 12:19:08.694] D (4019) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:19:08.699] D (4024) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:19:08.705] 
+[2018-06-24 12:19:08.705] D (4030) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:19:08.711] 
+[2018-06-24 12:19:08.711] D (4035) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:19:08.716] D (4041) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:19:08.722] D (4046) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:19:08.733] D (4057) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:19:08.738] D (4061) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:19:08.744] D (4066) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:19:08.749] 
+[2018-06-24 12:19:11.035] D (6365) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:19:11.035] D (6366) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:19:11.040] D (6366) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:19:11.051] I (6371) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:19:11.057] I (6379) WLAN: got ip:192.168.0.146
+[2018-06-24 12:19:11.062] I (6383) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:19:11.068] I (6388) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:19:11.125] I (6455) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:19:11.134] I (6464) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:19:11.308] I (6639) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:19:11.313] I (6639) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:19:11.319] D (6640) HEATC: Target temperature set to 19.0
+[2018-06-24 12:19:11.325] I (6645) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:19:11.330] I (6656) MQTT: Publish: "44.1" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:19:11.335] I (6662) wifi: state: run -> init (0)
+[2018-06-24 12:19:11.341] I (6664) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:19:11.347] D (6670) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:19:11.358] D (6679) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:19:11.363] 
+[2018-06-24 12:19:11.363] I (6679) wifi: flush txq
+[2018-06-24 12:19:11.363] D (6684) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:19:11.369] I (6686) wifi: stop sw txq
+[2018-06-24 12:19:11.369] D (6691) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:19:11.375] I (6694) wifi: lmac stop hw txq
+[2018-06-24 12:19:11.380] D (6699) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:19:11.386] D (6702) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:19:11.391] D (6712) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:19:11.397] 
+[2018-06-24 12:19:11.397] E (6718) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:19:11.402] D (6723) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:19:11.402] D (6726) SYS: Enter deep sleep
+[2018-06-24 12:19:11.408] D (6726) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:19:11.413] 
+[2018-06-24 12:19:11.413] D (6735) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:19:11.419] D (6741) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:19:11.425] 
+[2018-06-24 12:19:11.425] D (6747) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:20:01.155] ets Jun  8 2016 00:22:57
+[2018-06-24 12:20:01.155] 
+[2018-06-24 12:20:01.155] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:20:01.161] configsip: 0, SPIWP:0xee
+[2018-06-24 12:20:01.161] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:20:01.166] mode:DIO, clock div:2
+[2018-06-24 12:20:01.172] load:0x3fff0018,len:4
+[2018-06-24 12:20:01.172] load:0x3fff001c,len:5520
+[2018-06-24 12:20:01.177] ho 0 tail 12 room 4
+[2018-06-24 12:20:01.177] load:0x40078000,len:0
+[2018-06-24 12:20:01.177] load:0x40078000,len:12488
+[2018-06-24 12:20:01.185] entry 0x40078fd4
+[2018-06-24 12:20:01.185] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:20:01.190] I (30) boot: compile time 11:17:11
+[2018-06-24 12:20:01.196] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:20:01.201] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:20:01.201] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:20:01.207] I (43) boot: SPI Flash Size : 4MB
+[2018-06-24 12:20:01.212] I (48) boot: Partition Table:
+[2018-06-24 12:20:01.218] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:20:01.223] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:20:01.229] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:20:01.240] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:20:01.246] I (81) boot: End of partition table
+[2018-06-24 12:20:01.251] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:20:01.277] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:20:01.283] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:20:01.294] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:20:01.310] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:20:01.445] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:20:01.460] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:20:01.466] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:20:01.477] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:20:01.483] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:20:01.488] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:20:01.488] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:20:01.499] I (0) cpu_start: App cpu up.
+[2018-06-24 12:20:01.499] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:20:01.505] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:20:01.516] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:20:01.516] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:20:01.527] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:20:01.533] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:20:01.538] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:20:01.544] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:20:01.549] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:20:01.555] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:20:01.561] D (402) clk: RTC_SLOW_CLK calibration value: 3343027
+[2018-06-24 12:20:01.569] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:20:01.569] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:20:01.574] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:20:01.580] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:20:01.586] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:20:01.591] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:20:01.596] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:20:01.602] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:20:01.608] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:20:01.613] D (122) SYS: Starting up...
+[2018-06-24 12:20:01.613] D (125) SYS: Chip init
+[2018-06-24 12:20:01.619] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:20:01.643] D (161) SYS: Board/Hardware init
+[2018-06-24 12:20:01.643] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.654] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.665] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.671] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.682] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.693] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.699] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.710] I (218) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.721] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.726] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:01.737] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:20:01.743] D (252) SYS: I2C Init
+[2018-06-24 12:20:01.743] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:20:01.749] D (259) SYS: Pre-Task init
+[2018-06-24 12:20:01.754] D (262) SYS: WiFi init
+[2018-06-24 12:20:01.754] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:20:01.760] 
+[2018-06-24 12:20:01.760] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:20:01.766] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:20:01.771] 
+[2018-06-24 12:20:01.771] D (281) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:20:01.777] D (285) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:20:01.777] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:20:01.782] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:20:01.788] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:20:01.793] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:20:01.799] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:20:01.810] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:20:01.815] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:20:01.815] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:20:01.821] D (332) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:20:01.826] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:20:01.832] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:20:01.832] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:20:01.837] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:20:01.843] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:20:01.843] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:20:01.849] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:20:01.854] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:20:01.854] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:20:01.860] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:20:01.860] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:20:01.865] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:20:01.871] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:20:01.876] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:20:01.876] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:20:01.882] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:20:01.887] D (395) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:20:01.887] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:20:01.893] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:20:01.899] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:20:01.899] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:20:01.904] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:20:01.904] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:20:01.910] D (420) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:20:01.915] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:20:01.915] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:20:01.921] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:20:01.921] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:20:01.926] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:20:01.932] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:20:01.932] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:20:01.937] I (449) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:20:01.943] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:20:01.949] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:20:01.954] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:20:01.960] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:20:01.965] I (476) wifi: sleep enable
+[2018-06-24 12:20:01.965] I (477) wifi: type: 1
+[2018-06-24 12:20:01.971] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:20:01.971] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:20:01.982] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:20:01.982] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:20:01.987] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:20:01.993] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:20:01.993] D (512) nvs: nvs_close 3
+[2018-06-24 12:20:01.999] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:20:02.004] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:20:02.010] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:20:02.015] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:20:02.015] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:20:02.021] 
+[2018-06-24 12:20:02.021] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:20:02.027] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:20:02.032] 
+[2018-06-24 12:20:02.032] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:20:02.037] D (551) SYS: mDNS init
+[2018-06-24 12:20:02.043] D (554) SYS: Heat controller creation
+[2018-06-24 12:20:02.049] D (556) SYS: MQTT Client init
+[2018-06-24 12:20:02.049] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:20:02.054] D (564) SYS: System startup done
+[2018-06-24 12:20:02.064] D (561) HEATC: Temperature: 25.59
+[2018-06-24 12:20:02.064] 
+[2018-06-24 12:20:02.064] D (582) HEATC: Valve init
+[2018-06-24 12:20:02.069] 
+[2018-06-24 12:20:02.069] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:20:02.075] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:20:02.075] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:20:02.149] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:20:02.992] I (1509) wifi: state: init -> auth (b0)
+[2018-06-24 12:20:02.998] I (1514) wifi: state: auth -> assoc (0)
+[2018-06-24 12:20:03.003] I (1519) wifi: state: assoc -> run (10)
+[2018-06-24 12:20:03.032] I (1549) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:20:03.032] D (1550) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:20:03.043] D (1555) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:20:03.048] 
+[2018-06-24 12:20:03.048] D (1560) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:20:03.054] D (1566) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:20:03.059] 
+[2018-06-24 12:20:03.059] D (1571) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:20:03.065] 
+[2018-06-24 12:20:03.065] D (1577) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:20:03.070] D (1583) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:20:03.076] D (1588) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:20:03.087] D (1598) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:20:03.093] D (1602) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:20:03.098] D (1608) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:20:03.103] 
+[2018-06-24 12:20:06.001] I (4520) wifi: pm start, type:1
+[2018-06-24 12:20:06.001] 
+[2018-06-24 12:20:07.328] D (5845) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:20:07.328] D (5846) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:20:07.334] D (5847) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:20:07.345] I (5851) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:20:07.351] I (5859) WLAN: got ip:192.168.0.146
+[2018-06-24 12:20:07.356] I (5863) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:20:07.362] I (5868) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:20:07.415] I (5932) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:20:07.420] I (5938) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:20:07.604] I (6121) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:20:07.609] I (6122) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:20:07.614] D (6123) HEATC: Target temperature set to 19.0
+[2018-06-24 12:20:07.620] I (6128) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:20:07.626] I (6139) MQTT: Publish: "44.2" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:20:07.631] I (6144) wifi: state: run -> init (0)
+[2018-06-24 12:20:07.637] I (6146) wifi: pm stop, total sleep time: 419710/1625653
+[2018-06-24 12:20:07.643] 
+[2018-06-24 12:20:07.643] I (6146) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:20:07.648] D (6157) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:20:07.659] D (6166) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:20:07.664] 
+[2018-06-24 12:20:07.664] I (6166) wifi: flush txq
+[2018-06-24 12:20:07.664] D (6172) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:20:07.670] I (6174) wifi: stop sw txq
+[2018-06-24 12:20:07.670] D (6179) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:20:07.676] I (6182) wifi: lmac stop hw txq
+[2018-06-24 12:20:07.681] D (6187) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:20:07.687] D (6190) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:20:07.692] D (6200) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:20:07.698] 
+[2018-06-24 12:20:07.698] E (6206) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:20:07.698] D (6210) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:20:07.703] D (6214) SYS: Enter deep sleep
+[2018-06-24 12:20:07.709] D (6214) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:20:07.714] 
+[2018-06-24 12:20:07.714] D (6222) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:20:07.720] D (6228) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:20:07.725] 
+[2018-06-24 12:20:07.725] D (6234) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:20:57.483] ets Jun  8 2016 00:22:57
+[2018-06-24 12:20:57.483] 
+[2018-06-24 12:20:57.483] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:20:57.488] configsip: 0, SPIWP:0xee
+[2018-06-24 12:20:57.488] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:20:57.493] mode:DIO, clock div:2
+[2018-06-24 12:20:57.499] load:0x3fff0018,len:4
+[2018-06-24 12:20:57.499] load:0x3fff001c,len:5520
+[2018-06-24 12:20:57.504] ho 0 tail 12 room 4
+[2018-06-24 12:20:57.504] load:0x40078000,len:0
+[2018-06-24 12:20:57.504] load:0x40078000,len:12488
+[2018-06-24 12:20:57.512] entry 0x40078fd4
+[2018-06-24 12:20:57.512] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:20:57.518] I (30) boot: compile time 11:17:11
+[2018-06-24 12:20:57.523] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:20:57.529] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:20:57.529] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:20:57.534] I (44) boot: SPI Flash Size : 4MB
+[2018-06-24 12:20:57.540] I (48) boot: Partition Table:
+[2018-06-24 12:20:57.545] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:20:57.551] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:20:57.556] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:20:57.567] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:20:57.573] I (81) boot: End of partition table
+[2018-06-24 12:20:57.579] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:20:57.605] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:20:57.610] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:20:57.621] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:20:57.635] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:20:57.772] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:20:57.788] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:20:57.793] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:20:57.804] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:20:57.810] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:20:57.816] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:20:57.816] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:20:57.827] I (0) cpu_start: App cpu up.
+[2018-06-24 12:20:57.827] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:20:57.832] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:20:57.843] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:20:57.843] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:20:57.854] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:20:57.860] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:20:57.866] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:20:57.871] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:20:57.877] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:20:57.882] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:20:57.887] D (402) clk: RTC_SLOW_CLK calibration value: 3344614
+[2018-06-24 12:20:57.896] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:20:57.896] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:20:57.902] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:20:57.907] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:20:57.913] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:20:57.918] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:20:57.924] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:20:57.930] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:20:57.935] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:20:57.940] D (122) SYS: Starting up...
+[2018-06-24 12:20:57.940] D (125) SYS: Chip init
+[2018-06-24 12:20:57.946] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:20:57.971] D (161) SYS: Board/Hardware init
+[2018-06-24 12:20:57.971] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:57.982] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:57.993] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:57.998] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:58.009] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:58.020] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:58.026] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:58.037] I (219) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:58.049] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:58.054] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:20:58.065] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:20:58.070] D (252) SYS: I2C Init
+[2018-06-24 12:20:58.070] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:20:58.076] D (259) SYS: Pre-Task init
+[2018-06-24 12:20:58.081] D (262) SYS: WiFi init
+[2018-06-24 12:20:58.081] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:20:58.087] 
+[2018-06-24 12:20:58.087] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:20:58.093] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:20:58.098] 
+[2018-06-24 12:20:58.098] D (282) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:20:58.104] D (286) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:20:58.104] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:20:58.109] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:20:58.115] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:20:58.121] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:20:58.126] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:20:58.138] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:20:58.143] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:20:58.143] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:20:58.149] D (333) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:20:58.154] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:20:58.160] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:20:58.160] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:20:58.165] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:20:58.171] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:20:58.171] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:20:58.177] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:20:58.182] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:20:58.182] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:20:58.188] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:20:58.188] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:20:58.193] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:20:58.199] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:20:58.204] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:20:58.204] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:20:58.210] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:20:58.215] D (396) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:20:58.215] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:20:58.221] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:20:58.226] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:20:58.226] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:20:58.232] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:20:58.232] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:20:58.238] D (421) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:20:58.243] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:20:58.243] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:20:58.249] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:20:58.249] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:20:58.254] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:20:58.260] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:20:58.260] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:20:58.265] I (450) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:20:58.271] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:20:58.276] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:20:58.282] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:20:58.288] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:20:58.293] I (476) wifi: sleep enable
+[2018-06-24 12:20:58.293] I (477) wifi: type: 1
+[2018-06-24 12:20:58.299] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:20:58.299] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:20:58.310] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:20:58.310] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:20:58.315] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:20:58.321] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:20:58.321] D (512) nvs: nvs_close 3
+[2018-06-24 12:20:58.326] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:20:58.332] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:20:58.338] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:20:58.343] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:20:58.343] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:20:58.349] 
+[2018-06-24 12:20:58.349] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:20:58.354] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:20:58.360] 
+[2018-06-24 12:20:58.360] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:20:58.365] D (550) SYS: mDNS init
+[2018-06-24 12:20:58.371] D (553) SYS: Heat controller creation
+[2018-06-24 12:20:58.376] D (556) SYS: MQTT Client init
+[2018-06-24 12:20:58.376] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:20:58.382] D (564) SYS: System startup done
+[2018-06-24 12:20:58.391] D (561) HEATC: Temperature: 25.57
+[2018-06-24 12:20:58.391] 
+[2018-06-24 12:20:58.391] D (582) HEATC: Valve init
+[2018-06-24 12:20:58.397] 
+[2018-06-24 12:20:58.397] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:20:58.402] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:20:58.402] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:20:58.477] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:20:59.319] I (1510) wifi: state: init -> auth (b0)
+[2018-06-24 12:20:59.325] I (1513) wifi: state: auth -> assoc (0)
+[2018-06-24 12:20:59.325] I (1518) wifi: state: assoc -> run (10)
+[2018-06-24 12:20:59.356] I (1546) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:20:59.356] D (1547) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:20:59.368] D (1552) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:20:59.373] 
+[2018-06-24 12:20:59.373] D (1557) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:20:59.378] D (1563) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:20:59.384] 
+[2018-06-24 12:20:59.384] D (1569) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:20:59.389] 
+[2018-06-24 12:20:59.389] D (1574) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:20:59.395] D (1580) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:20:59.401] D (1585) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:20:59.412] D (1595) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:20:59.417] D (1599) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:20:59.423] D (1605) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:20:59.427] 
+[2018-06-24 12:21:02.328] I (4519) wifi: pm start, type:1
+[2018-06-24 12:21:02.328] 
+[2018-06-24 12:21:07.656] D (9845) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:21:07.656] D (9846) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:21:07.661] D (9847) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:21:07.675] I (9851) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:21:07.678] I (9859) WLAN: got ip:192.168.0.146
+[2018-06-24 12:21:07.683] I (9863) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:21:07.690] I (9868) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:21:07.740] I (9930) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:21:07.749] I (9937) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:21:07.932] I (10122) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:21:07.937] I (10122) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:21:07.943] D (10124) HEATC: Target temperature set to 19.0
+[2018-06-24 12:21:07.948] I (10129) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:21:07.954] I (10139) MQTT: Publish: "43.6" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:21:07.959] I (10145) wifi: state: run -> init (0)
+[2018-06-24 12:21:07.965] I (10147) wifi: pm stop, total sleep time: 4509202/5627942
+[2018-06-24 12:21:07.971] 
+[2018-06-24 12:21:07.971] I (10147) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:21:07.976] D (10159) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:21:07.987] D (10168) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:21:07.993] 
+[2018-06-24 12:21:07.993] I (10168) wifi: flush txq
+[2018-06-24 12:21:07.993] D (10173) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:21:07.998] I (10176) wifi: stop sw txq
+[2018-06-24 12:21:08.004] D (10181) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:21:08.009] I (10184) wifi: lmac stop hw txq
+[2018-06-24 12:21:08.009] D (10189) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:21:08.015] D (10192) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:21:08.020] D (10202) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:21:08.026] 
+[2018-06-24 12:21:08.026] E (10208) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:21:08.032] D (10212) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:21:08.032] D (10216) SYS: Enter deep sleep
+[2018-06-24 12:21:08.037] D (10216) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:21:08.043] 
+[2018-06-24 12:21:08.043] D (10225) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:21:08.048] D (10231) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:21:08.054] 
+[2018-06-24 12:21:08.054] D (10237) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:21:57.800] ets Jun  8 2016 00:22:57
+[2018-06-24 12:21:57.800] 
+[2018-06-24 12:21:57.800] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:21:57.805] configsip: 0, SPIWP:0xee
+[2018-06-24 12:21:57.805] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:21:57.810] mode:DIO, clock div:2
+[2018-06-24 12:21:57.817] load:0x3fff0018,len:4
+[2018-06-24 12:21:57.817] load:0x3fff001c,len:5520
+[2018-06-24 12:21:57.821] ho 0 tail 12 room 4
+[2018-06-24 12:21:57.821] load:0x40078000,len:0
+[2018-06-24 12:21:57.821] load:0x40078000,len:12488
+[2018-06-24 12:21:57.829] entry 0x40078fd4
+[2018-06-24 12:21:57.829] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:21:57.835] I (30) boot: compile time 11:17:11
+[2018-06-24 12:21:57.840] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:21:57.845] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:21:57.845] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:21:57.851] I (43) boot: SPI Flash Size : 4MB
+[2018-06-24 12:21:57.856] I (48) boot: Partition Table:
+[2018-06-24 12:21:57.862] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:21:57.868] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:21:57.873] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:21:57.884] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:21:57.890] I (81) boot: End of partition table
+[2018-06-24 12:21:57.895] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:21:57.921] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:21:57.927] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:21:57.938] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:21:57.952] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:21:58.089] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:21:58.105] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:21:58.110] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:21:58.121] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:21:58.127] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:21:58.132] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:21:58.132] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:21:58.143] I (0) cpu_start: App cpu up.
+[2018-06-24 12:21:58.143] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:21:58.149] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:21:58.160] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:21:58.160] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:21:58.171] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:21:58.177] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:21:58.182] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:21:58.188] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:21:58.193] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:21:58.199] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:21:58.205] D (402) clk: RTC_SLOW_CLK calibration value: 3345510
+[2018-06-24 12:21:58.213] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:21:58.213] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:21:58.219] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:21:58.224] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:21:58.230] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:21:58.235] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:21:58.241] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:21:58.246] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:21:58.252] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:21:58.257] D (122) SYS: Starting up...
+[2018-06-24 12:21:58.257] D (125) SYS: Chip init
+[2018-06-24 12:21:58.263] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:21:58.288] D (161) SYS: Board/Hardware init
+[2018-06-24 12:21:58.288] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.299] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.310] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.315] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.326] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.338] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.343] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.354] I (219) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.365] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.371] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:21:58.382] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:21:58.387] D (252) SYS: I2C Init
+[2018-06-24 12:21:58.387] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:21:58.393] D (259) SYS: Pre-Task init
+[2018-06-24 12:21:58.398] D (262) SYS: WiFi init
+[2018-06-24 12:21:58.398] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:21:58.404] 
+[2018-06-24 12:21:58.404] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:21:58.410] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:21:58.415] 
+[2018-06-24 12:21:58.415] D (282) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:21:58.421] D (286) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:21:58.421] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:21:58.426] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:21:58.432] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:21:58.438] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:21:58.443] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:21:58.454] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:21:58.460] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:21:58.460] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:21:58.465] D (333) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:21:58.471] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:21:58.476] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:21:58.476] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:21:58.482] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:21:58.487] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:21:58.487] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:21:58.493] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:21:58.498] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:21:58.498] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:21:58.504] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:21:58.504] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:21:58.510] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:21:58.515] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:21:58.521] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:21:58.521] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:21:58.526] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:21:58.532] D (396) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:21:58.532] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:21:58.537] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:21:58.543] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:21:58.543] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:21:58.548] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:21:58.548] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:21:58.554] D (421) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:21:58.560] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:21:58.560] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:21:58.565] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:21:58.565] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:21:58.571] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:21:58.576] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:21:58.576] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:21:58.582] I (450) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:21:58.588] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:21:58.593] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:21:58.598] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:21:58.604] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:21:58.610] I (476) wifi: sleep enable
+[2018-06-24 12:21:58.610] I (477) wifi: type: 1
+[2018-06-24 12:21:58.615] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:21:58.615] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:21:58.626] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:21:58.626] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:21:58.632] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:21:58.637] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:21:58.637] D (512) nvs: nvs_close 3
+[2018-06-24 12:21:58.643] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:21:58.648] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:21:58.654] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:21:58.660] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:21:58.660] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:21:58.666] 
+[2018-06-24 12:21:58.666] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:21:58.671] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:21:58.676] 
+[2018-06-24 12:21:58.676] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:21:58.682] D (550) SYS: mDNS init
+[2018-06-24 12:21:58.687] D (553) SYS: Heat controller creation
+[2018-06-24 12:21:58.693] D (556) SYS: MQTT Client init
+[2018-06-24 12:21:58.693] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:21:58.700] D (564) SYS: System startup done
+[2018-06-24 12:21:58.735] D (561) HEATC: Temperature: 25.59
+[2018-06-24 12:21:58.735] 
+[2018-06-24 12:21:58.735] D (582) HEATC: Valve init
+[2018-06-24 12:21:58.735] 
+[2018-06-24 12:21:58.735] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:21:58.735] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:21:58.735] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:21:58.793] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:21:59.636] I (1510) wifi: state: init -> auth (b0)
+[2018-06-24 12:21:59.643] I (1516) wifi: state: auth -> assoc (0)
+[2018-06-24 12:21:59.652] I (1526) wifi: state: assoc -> run (10)
+[2018-06-24 12:21:59.680] I (1554) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:21:59.680] D (1555) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:21:59.691] D (1560) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:21:59.697] 
+[2018-06-24 12:21:59.697] D (1565) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:21:59.702] D (1570) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:21:59.708] 
+[2018-06-24 12:21:59.708] D (1576) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:21:59.713] 
+[2018-06-24 12:21:59.713] D (1582) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:21:59.719] D (1587) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:21:59.724] D (1592) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:21:59.736] D (1603) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:21:59.741] D (1607) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:21:59.747] D (1613) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:21:59.752] 
+[2018-06-24 12:22:01.972] D (3844) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:22:01.972] D (3845) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:22:01.978] D (3846) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:22:01.988] I (3850) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:22:01.994] I (3858) WLAN: got ip:192.168.0.146
+[2018-06-24 12:22:01.999] I (3862) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:22:02.005] I (3867) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:22:02.045] I (3918) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:22:02.051] I (3924) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:22:02.264] I (4138) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:22:02.270] I (4138) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:22:02.275] D (4139) HEATC: Target temperature set to 19.0
+[2018-06-24 12:22:02.281] I (4145) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:22:02.288] I (4155) MQTT: Publish: "43.6" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:22:02.292] I (4160) wifi: state: run -> init (0)
+[2018-06-24 12:22:02.298] I (4163) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:22:02.303] D (4168) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:22:02.314] D (4178) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:22:02.320] 
+[2018-06-24 12:22:02.320] I (4178) wifi: flush txq
+[2018-06-24 12:22:02.320] D (4183) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:22:02.325] I (4185) wifi: stop sw txq
+[2018-06-24 12:22:02.325] D (4190) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:22:02.331] I (4193) wifi: lmac stop hw txq
+[2018-06-24 12:22:02.336] D (4198) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:22:02.342] D (4201) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:22:02.347] D (4211) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:22:02.354] 
+[2018-06-24 12:22:02.354] E (4217) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:22:02.358] D (4222) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:22:02.358] D (4225) SYS: Enter deep sleep
+[2018-06-24 12:22:02.364] D (4225) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:22:02.370] 
+[2018-06-24 12:22:02.370] D (4234) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:22:02.375] D (4240) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:22:02.381] 
+[2018-06-24 12:22:02.381] D (4246) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:22:52.100] ets Jun  8 2016 00:22:57
+[2018-06-24 12:22:52.100] 
+[2018-06-24 12:22:52.100] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:22:52.105] configsip: 0, SPIWP:0xee
+[2018-06-24 12:22:52.105] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:22:52.111] mode:DIO, clock div:2
+[2018-06-24 12:22:52.116] load:0x3fff0018,len:4
+[2018-06-24 12:22:52.116] load:0x3fff001c,len:5520
+[2018-06-24 12:22:52.122] ho 0 tail 12 room 4
+[2018-06-24 12:22:52.122] load:0x40078000,len:0
+[2018-06-24 12:22:52.122] load:0x40078000,len:12488
+[2018-06-24 12:22:52.129] entry 0x40078fd4
+[2018-06-24 12:22:52.129] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:22:52.135] I (30) boot: compile time 11:17:11
+[2018-06-24 12:22:52.140] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:22:52.146] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:22:52.146] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:22:52.151] I (43) boot: SPI Flash Size : 4MB
+[2018-06-24 12:22:52.157] I (48) boot: Partition Table:
+[2018-06-24 12:22:52.163] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:22:52.168] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:22:52.173] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:22:52.184] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:22:52.190] I (81) boot: End of partition table
+[2018-06-24 12:22:52.196] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:22:52.222] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:22:52.228] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:22:52.238] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:22:52.253] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:22:52.390] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:22:52.406] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:22:52.411] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:22:52.422] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:22:52.428] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:22:52.433] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:22:52.433] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:22:52.445] I (0) cpu_start: App cpu up.
+[2018-06-24 12:22:52.445] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:22:52.450] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:22:52.461] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:22:52.461] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:22:52.472] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:22:52.478] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:22:52.483] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:22:52.489] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:22:52.494] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:22:52.500] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:22:52.506] D (402) clk: RTC_SLOW_CLK calibration value: 3344550
+[2018-06-24 12:22:52.514] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:22:52.514] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:22:52.519] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:22:52.525] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:22:52.531] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:22:52.536] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:22:52.542] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:22:52.547] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:22:52.553] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:22:52.558] D (122) SYS: Starting up...
+[2018-06-24 12:22:52.558] D (125) SYS: Chip init
+[2018-06-24 12:22:52.564] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:22:52.588] D (161) SYS: Board/Hardware init
+[2018-06-24 12:22:52.588] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.599] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.610] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.616] I (181) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.627] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.638] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.644] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.655] I (218) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.666] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.672] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:22:52.683] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:22:52.688] D (252) SYS: I2C Init
+[2018-06-24 12:22:52.688] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:22:52.694] D (259) SYS: Pre-Task init
+[2018-06-24 12:22:52.699] D (262) SYS: WiFi init
+[2018-06-24 12:22:52.699] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:22:52.705] 
+[2018-06-24 12:22:52.705] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:22:52.710] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:22:52.716] 
+[2018-06-24 12:22:52.716] D (281) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:22:52.722] D (285) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:22:52.722] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:22:52.727] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:22:52.733] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:22:52.738] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:22:52.744] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:22:52.755] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:22:52.760] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:22:52.760] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:22:52.766] D (332) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:22:52.772] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:22:52.777] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:22:52.777] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:22:52.783] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:22:52.788] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:22:52.788] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:22:52.794] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:22:52.799] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:22:52.799] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:22:52.805] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:22:52.805] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:22:52.810] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:22:52.816] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:22:52.822] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:22:52.822] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:22:52.827] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:22:52.832] D (395) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:22:52.832] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:22:52.838] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:22:52.844] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:22:52.844] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:22:52.849] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:22:52.849] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:22:52.855] D (420) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:22:52.860] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:22:52.860] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:22:52.866] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:22:52.866] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:22:52.872] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:22:52.877] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:22:52.877] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:22:52.883] I (449) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:22:52.888] I (455) wifi: wifi driver task: 3ffd23b0, prio:23, stack:4096
+[2018-06-24 12:22:52.894] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:22:52.899] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:22:52.905] I (469) wifi: wifi power manager task: 0x3ffd6ff0 prio: 21 stack: 2560
+[2018-06-24 12:22:52.910] I (476) wifi: sleep enable
+[2018-06-24 12:22:52.910] I (477) wifi: type: 1
+[2018-06-24 12:22:52.916] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:22:52.916] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:22:52.927] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:22:52.927] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:22:52.934] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:22:52.938] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:22:52.938] D (512) nvs: nvs_close 3
+[2018-06-24 12:22:52.945] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:22:52.950] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:22:52.955] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:22:52.960] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:22:52.960] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:22:52.966] 
+[2018-06-24 12:22:52.966] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:22:52.972] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:22:52.977] 
+[2018-06-24 12:22:52.977] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:22:52.983] D (550) SYS: mDNS init
+[2018-06-24 12:22:52.988] D (553) SYS: Heat controller creation
+[2018-06-24 12:22:52.994] D (556) SYS: MQTT Client init
+[2018-06-24 12:22:52.994] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:22:52.999] D (564) SYS: System startup done
+[2018-06-24 12:22:53.009] D (561) HEATC: Temperature: 25.61
+[2018-06-24 12:22:53.009] 
+[2018-06-24 12:22:53.009] D (582) HEATC: Valve init
+[2018-06-24 12:22:53.015] 
+[2018-06-24 12:22:53.015] D (583) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:22:53.020] D (583) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:22:53.020] D (586) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:22:53.094] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:22:53.937] I (1509) wifi: state: init -> auth (b0)
+[2018-06-24 12:22:53.942] I (1513) wifi: state: auth -> assoc (0)
+[2018-06-24 12:22:53.942] I (1518) wifi: state: assoc -> run (10)
+[2018-06-24 12:22:53.965] I (1537) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:22:53.965] D (1538) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:22:53.976] D (1543) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:22:53.981] 
+[2018-06-24 12:22:53.981] D (1548) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:22:53.987] D (1554) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:22:53.992] 
+[2018-06-24 12:22:53.992] D (1560) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:22:53.998] 
+[2018-06-24 12:22:53.998] D (1565) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:22:54.003] D (1571) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:22:54.009] D (1576) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd76b0 interval=120 ip=0
+[2018-06-24 12:22:54.020] D (1587) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:22:54.026] D (1591) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:22:54.031] D (1596) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:22:54.036] 
+[2018-06-24 12:22:56.273] D (3844) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:22:56.273] D (3845) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:22:56.278] D (3846) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:22:56.289] I (3851) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:22:56.295] I (3858) WLAN: got ip:192.168.0.146
+[2018-06-24 12:22:56.300] I (3862) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:22:56.306] I (3868) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:22:56.334] I (3907) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:22:56.344] I (3917) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:22:56.559] I (4131) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:22:56.564] I (4132) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:22:56.570] D (4133) HEATC: Target temperature set to 19.0
+[2018-06-24 12:22:56.575] I (4138) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:22:56.581] I (4149) MQTT: Publish: "43.6" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:22:56.586] I (4155) wifi: state: run -> init (0)
+[2018-06-24 12:22:56.592] I (4156) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:22:56.598] D (4163) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:22:56.608] D (4171) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:22:56.614] 
+[2018-06-24 12:22:56.614] I (4172) wifi: flush txq
+[2018-06-24 12:22:56.614] D (4177) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:22:56.620] I (4179) wifi: stop sw txq
+[2018-06-24 12:22:56.620] D (4184) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:22:56.625] I (4187) wifi: lmac stop hw txq
+[2018-06-24 12:22:56.631] D (4192) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:22:56.636] D (4195) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:22:56.642] D (4205) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:22:56.647] 
+[2018-06-24 12:22:56.647] E (4211) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:22:56.653] D (4215) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:22:56.653] D (4219) SYS: Enter deep sleep
+[2018-06-24 12:22:56.659] D (4219) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:22:56.664] 
+[2018-06-24 12:22:56.664] D (4228) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:22:56.670] D (4234) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:22:56.675] 
+[2018-06-24 12:22:56.675] D (4239) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
+
+[2018-06-24 12:23:46.403] ets Jun  8 2016 00:22:57
+[2018-06-24 12:23:46.403] 
+[2018-06-24 12:23:46.403] rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[2018-06-24 12:23:46.408] configsip: 0, SPIWP:0xee
+[2018-06-24 12:23:46.408] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[2018-06-24 12:23:46.413] mode:DIO, clock div:2
+[2018-06-24 12:23:46.419] load:0x3fff0018,len:4
+[2018-06-24 12:23:46.419] load:0x3fff001c,len:5520
+[2018-06-24 12:23:46.425] ho 0 tail 12 room 4
+[2018-06-24 12:23:46.425] load:0x40078000,len:0
+[2018-06-24 12:23:46.425] load:0x40078000,len:12488
+[2018-06-24 12:23:46.432] entry 0x40078fd4
+[2018-06-24 12:23:46.432] I (30) boot: ESP-IDF 2.300.0 2nd stage bootloader
+[2018-06-24 12:23:46.438] I (30) boot: compile time 11:17:11
+[2018-06-24 12:23:46.443] I (31) boot: Enabling RNG early entropy source...
+[2018-06-24 12:23:46.449] I (35) boot: SPI Speed      : 40MHz
+[2018-06-24 12:23:46.449] I (40) boot: SPI Mode       : DIO
+[2018-06-24 12:23:46.454] I (43) boot: SPI Flash Size : 4MB
+[2018-06-24 12:23:46.460] I (48) boot: Partition Table:
+[2018-06-24 12:23:46.465] I (51) boot: ## Label            Usage          Type ST Offset   Length
+[2018-06-24 12:23:46.471] I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[2018-06-24 12:23:46.476] I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[2018-06-24 12:23:46.488] I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+[2018-06-24 12:23:46.493] I (81) boot: End of partition table
+[2018-06-24 12:23:46.499] I (85) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x137b0 ( 79792) map
+[2018-06-24 12:23:46.525] I (122) esp_image: segment 1: paddr=0x000237d8 vaddr=0x3ffc0000 size=0x02f40 ( 12096) load
+[2018-06-24 12:23:46.530] I (127) esp_image: segment 2: paddr=0x00026720 vaddr=0x40080000 size=0x00400 (  1024) load
+[2018-06-24 12:23:46.541] I (129) esp_image: segment 3: paddr=0x00026b28 vaddr=0x40080400 size=0x094e8 ( 38120) load
+[2018-06-24 12:23:46.556] I (153) esp_image: segment 4: paddr=0x00030018 vaddr=0x400d0018 size=0x5f4c8 (390344) map
+[2018-06-24 12:23:46.693] I (290) esp_image: segment 5: paddr=0x0008f4e8 vaddr=0x400898e8 size=0x0934c ( 37708) load
+[2018-06-24 12:23:46.708] I (305) esp_image: segment 6: paddr=0x0009883c vaddr=0x400c0000 size=0x00064 (   100) 
+[2018-06-24 12:23:46.714] I (306) esp_image: segment 7: paddr=0x000988a8 vaddr=0x50000000 size=0x00008 (     8) 
+[2018-06-24 12:23:46.725] I (322) boot: Loaded app from partition at offset 0x10000
+[2018-06-24 12:23:46.730] I (322) boot: Disabling RNG early entropy source...
+[2018-06-24 12:23:46.736] I (323) cpu_start: Pro cpu up.
+[2018-06-24 12:23:46.736] I (327) cpu_start: Starting app cpu, entry point is 0x400822e0
+[2018-06-24 12:23:46.747] I (0) cpu_start: App cpu up.
+[2018-06-24 12:23:46.747] I (337) heap_init: Initializing. RAM available for dynamic allocation:
+[2018-06-24 12:23:46.752] D (344) heap_init: New heap initialised at 0x3ffaff10
+[2018-06-24 12:23:46.763] I (349) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+[2018-06-24 12:23:46.763] D (355) heap_init: New heap initialised at 0x3ffc9500
+[2018-06-24 12:23:46.775] I (360) heap_init: At 3FFC9500 len 00016B00 (90 KiB): DRAM
+[2018-06-24 12:23:46.780] I (366) heap_init: At 3FFE0440 len 00003BC0 (14 KiB): D/IRAM
+[2018-06-24 12:23:46.786] I (373) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[2018-06-24 12:23:46.791] D (379) heap_init: New heap initialised at 0x40092c34
+[2018-06-24 12:23:46.797] I (384) heap_init: At 40092C34 len 0000D3CC (52 KiB): IRAM
+[2018-06-24 12:23:46.802] I (390) cpu_start: Pro cpu start user code
+[2018-06-24 12:23:46.808] D (402) clk: RTC_SLOW_CLK calibration value: 3344422
+[2018-06-24 12:23:46.816] D (76) intr_alloc: Connected src 46 to int 2 (cpu 0)
+[2018-06-24 12:23:46.816] D (77) intr_alloc: Connected src 57 to int 3 (cpu 0)
+[2018-06-24 12:23:46.822] D (77) intr_alloc: Connected src 24 to int 9 (cpu 0)
+[2018-06-24 12:23:46.827] I (83) cpu_start: Starting scheduler on PRO CPU.
+[2018-06-24 12:23:46.833] D (0) intr_alloc: Connected src 25 to int 2 (cpu 1)
+[2018-06-24 12:23:46.839] I (4) cpu_start: Starting scheduler on APP CPU.
+[2018-06-24 12:23:46.844] D (106) heap_init: New heap initialised at 0x3ffe0440
+[2018-06-24 12:23:46.850] D (112) heap_init: New heap initialised at 0x3ffe4350
+[2018-06-24 12:23:46.855] D (117) intr_alloc: Connected src 16 to int 12 (cpu 0)
+[2018-06-24 12:23:46.861] D (122) SYS: Starting up...
+[2018-06-24 12:23:46.861] D (125) SYS: Chip init
+[2018-06-24 12:23:46.866] D (128) nvs: nvs_flash_init_custom partition=nvs start=9 count=6
+[2018-06-24 12:23:46.891] D (161) SYS: Board/Hardware init
+[2018-06-24 12:23:46.891] I (162) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.902] I (163) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.913] I (172) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.918] I (182) gpio: GPIO[39]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.930] I (191) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.941] I (200) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.946] I (209) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.958] I (219) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.968] I (228) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.974] I (237) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+[2018-06-24 12:23:46.985] D (247) intr_alloc: Connected src 30 to int 13 (cpu 0)
+[2018-06-24 12:23:46.991] D (252) SYS: I2C Init
+[2018-06-24 12:23:46.991] D (254) intr_alloc: Connected src 49 to int 17 (cpu 0)
+[2018-06-24 12:23:46.996] D (259) SYS: Pre-Task init
+[2018-06-24 12:23:47.002] D (262) SYS: WiFi init
+[2018-06-24 12:23:47.002] D (265) tcpip_adapter: check: local, if=0 fn=0x400f0094
+[2018-06-24 12:23:47.008] 
+[2018-06-24 12:23:47.008] D (270) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:23:47.013] D (276) tcpip_adapter: check: remote, if=0 fn=0x400f0094
+[2018-06-24 12:23:47.019] 
+[2018-06-24 12:23:47.019] D (282) nvs: nvs_open_from_partition misc 1
+[2018-06-24 12:23:47.024] D (286) nvs: nvs_get_str_or_blob log
+[2018-06-24 12:23:47.024] I (290) wifi: wifi firmware version: 6450435
+[2018-06-24 12:23:47.030] I (293) wifi: config NVS flash: enabled
+[2018-06-24 12:23:47.035] I (297) wifi: config nano formating: disabled
+[2018-06-24 12:23:47.041] I (301) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:23:47.046] I (310) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+[2018-06-24 12:23:47.058] D (320) nvs: nvs_open_from_partition nvs.net80211 1
+[2018-06-24 12:23:47.063] D (325) nvs: nvs_get opmode 1
+[2018-06-24 12:23:47.063] D (328) nvs: nvs_get_str_or_blob sta.ssid
+[2018-06-24 12:23:47.068] D (333) nvs: nvs_get_str_or_blob sta.mac
+[2018-06-24 12:23:47.074] D (336) nvs: nvs_get sta.authmode 1
+[2018-06-24 12:23:47.080] D (340) nvs: nvs_get_str_or_blob sta.pswd
+[2018-06-24 12:23:47.080] D (344) nvs: nvs_get_str_or_blob sta.pmk
+[2018-06-24 12:23:47.085] D (348) nvs: nvs_get sta.chan 1
+[2018-06-24 12:23:47.091] D (351) nvs: nvs_get auto.conn 1
+[2018-06-24 12:23:47.091] D (354) nvs: nvs_get bssid.set 1
+[2018-06-24 12:23:47.096] D (358) nvs: nvs_get_str_or_blob sta.bssid
+[2018-06-24 12:23:47.102] D (362) nvs: nvs_get sta.phym 1
+[2018-06-24 12:23:47.102] D (365) nvs: nvs_get sta.phybw 1
+[2018-06-24 12:23:47.108] D (368) nvs: nvs_get_str_or_blob sta.apsw
+[2018-06-24 12:23:47.108] D (373) nvs: nvs_get_str_or_blob sta.apinfo
+[2018-06-24 12:23:47.113] D (379) nvs: nvs_get sta.scan_method 1
+[2018-06-24 12:23:47.118] D (380) nvs: nvs_get sta.sort_method 1
+[2018-06-24 12:23:47.124] D (384) nvs: nvs_get sta.minrssi 1
+[2018-06-24 12:23:47.124] D (388) nvs: nvs_get sta.minauth 1
+[2018-06-24 12:23:47.130] D (391) nvs: nvs_get_str_or_blob ap.ssid
+[2018-06-24 12:23:47.135] D (396) nvs: nvs_get_str_or_blob ap.mac
+[2018-06-24 12:23:47.135] D (399) nvs: nvs_get_str_or_blob ap.passwd
+[2018-06-24 12:23:47.141] D (404) nvs: nvs_get_str_or_blob ap.pmk
+[2018-06-24 12:23:47.146] D (407) nvs: nvs_get ap.chan 1
+[2018-06-24 12:23:47.146] D (410) nvs: nvs_get ap.authmode 1
+[2018-06-24 12:23:47.152] D (414) nvs: nvs_get ap.hidden 1
+[2018-06-24 12:23:47.152] D (417) nvs: nvs_get ap.max.conn 1
+[2018-06-24 12:23:47.157] D (421) nvs: nvs_get bcn.interval 2
+[2018-06-24 12:23:47.163] D (424) nvs: nvs_get ap.phym 1
+[2018-06-24 12:23:47.163] D (427) nvs: nvs_get ap.phybw 1
+[2018-06-24 12:23:47.168] D (430) nvs: nvs_get ap.sndchan 1
+[2018-06-24 12:23:47.168] D (434) nvs: nvs_set_blob sta.mac 6
+[2018-06-24 12:23:47.174] D (439) nvs: nvs_set_blob ap.mac 6
+[2018-06-24 12:23:47.180] I (442) wifi: Init dynamic tx buffer num: 32
+[2018-06-24 12:23:47.180] I (445) wifi: Init data frame dynamic rx buffer num: 32
+[2018-06-24 12:23:47.185] I (450) wifi: Init management frame dynamic rx buffer num: 32
+[2018-06-24 12:23:47.191] I (455) wifi: wifi driver task: 3ffd2058, prio:23, stack:4096
+[2018-06-24 12:23:47.196] I (461) wifi: Init static rx buffer num: 10
+[2018-06-24 12:23:47.202] I (464) wifi: Init dynamic rx buffer num: 32
+[2018-06-24 12:23:47.207] I (469) wifi: wifi power manager task: 0x3ffd6b9c prio: 21 stack: 2560
+[2018-06-24 12:23:47.213] I (476) wifi: sleep enable
+[2018-06-24 12:23:47.213] I (477) wifi: type: 1
+[2018-06-24 12:23:47.218] D (479) RTC_MODULE: Wi-Fi takes adc2 lock.
+[2018-06-24 12:23:47.218] D (483) phy_init: loading PHY init data from application binary
+[2018-06-24 12:23:47.230] D (489) nvs: nvs_open_from_partition phy 0
+[2018-06-24 12:23:47.230] D (493) nvs: nvs_get cal_version 4
+[2018-06-24 12:23:47.235] D (497) nvs: nvs_get_str_or_blob cal_mac
+[2018-06-24 12:23:47.241] D (501) nvs: nvs_get_str_or_blob cal_data
+[2018-06-24 12:23:47.241] D (512) nvs: nvs_close 3
+[2018-06-24 12:23:47.247] I (514) phy: phy_version: 366.0, ba9923d, Dec 29 2017, 14:25:06, 0, 1
+[2018-06-24 12:23:47.252] I (516) wifi: mode : sta (24:0a:c4:03:4d:00)
+[2018-06-24 12:23:47.257] D (519) event: SYSTEM_EVENT_STA_START
+[2018-06-24 12:23:47.263] I (523) WLAN: wifi_init_sta finished.
+[2018-06-24 12:23:47.263] D (523) tcpip_adapter: check: local, if=0 fn=0x400ef974
+[2018-06-24 12:23:47.268] 
+[2018-06-24 12:23:47.268] D (532) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:23:47.274] D (538) tcpip_adapter: check: remote, if=0 fn=0x400ef974
+[2018-06-24 12:23:47.280] 
+[2018-06-24 12:23:47.280] I (545) WLAN: connect to ap SSID:FruitNET_Dev password:DaFruit_Dev
+[2018-06-24 12:23:47.285] D (550) SYS: mDNS init
+[2018-06-24 12:23:47.291] D (553) SYS: Heat controller creation
+[2018-06-24 12:23:47.296] D (556) SYS: MQTT Client init
+[2018-06-24 12:23:47.296] I (560) MQTT: Client id is: 240ac4034d00
+[2018-06-24 12:23:47.302] D (564) SYS: System startup done
+[2018-06-24 12:23:47.312] D (561) HEATC: Temperature: 25.59
+[2018-06-24 12:23:47.312] 
+[2018-06-24 12:23:47.312] D (583) HEATC: Valve init
+[2018-06-24 12:23:47.318] 
+[2018-06-24 12:23:47.318] D (584) intr_alloc: Connected src 48 to int 23 (cpu 0)
+[2018-06-24 12:23:47.325] D (584) VALVE: RTC RAM max_conuts: 4172
+[2018-06-24 12:23:47.325] D (587) VALVE: RTC RAM _valvePosition: 0
+[2018-06-24 12:23:47.397] I (665) wifi: n:11 0, o:1 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:23:48.240] I (1510) wifi: state: init -> auth (b0)
+[2018-06-24 12:23:48.240] I (1513) wifi: state: auth -> assoc (0)
+[2018-06-24 12:23:48.249] I (1518) wifi: state: assoc -> run (10)
+[2018-06-24 12:23:48.277] I (1547) wifi: connected with FruitNET_Dev, channel 11
+[2018-06-24 12:23:48.277] D (1548) event: SYSTEM_EVENT_STA_CONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, channel:11, authmode:3
+[2018-06-24 12:23:48.288] D (1553) tcpip_adapter: check: local, if=0 fn=0x400efb5c
+[2018-06-24 12:23:48.294] 
+[2018-06-24 12:23:48.294] D (1558) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:23:48.299] D (1563) tcpip_adapter: check: remote, if=0 fn=0x400efb5c
+[2018-06-24 12:23:48.305] 
+[2018-06-24 12:23:48.305] D (1569) tcpip_adapter: check: local, if=0 fn=0x400eff54
+[2018-06-24 12:23:48.311] 
+[2018-06-24 12:23:48.311] D (1575) tcpip_adapter: dhcp client init ip/mask/gw to all-0
+[2018-06-24 12:23:48.316] D (1580) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:23:48.321] D (1585) tcpip_adapter: if0 start ip lost tmr: no need start because netif=0x3ffd7248 interval=120 ip=0
+[2018-06-24 12:23:48.332] D (1596) tcpip_adapter: dhcp client start successfully
+[2018-06-24 12:23:48.338] D (1600) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:23:48.344] D (1606) tcpip_adapter: check: remote, if=0 fn=0x400eff54
+[2018-06-24 12:23:48.349] 
+[2018-06-24 12:23:50.573] D (3842) tcpip_adapter: if0 dhcpc cb
+[2018-06-24 12:23:50.573] D (3843) tcpip_adapter: if0 ip changed=1
+[2018-06-24 12:23:50.578] D (3844) event: SYSTEM_EVENT_STA_GOT_IP, ip:192.168.0.146, mask:255.255.255.0, gw:192.168.0.1
+[2018-06-24 12:23:50.589] I (3849) event: sta ip: 192.168.0.146, mask: 255.255.255.0, gw: 192.168.0.1
+[2018-06-24 12:23:50.595] I (3856) WLAN: got ip:192.168.0.146
+[2018-06-24 12:23:50.601] I (3860) esp_mqtt: esp_mqtt_start: create task
+[2018-06-24 12:23:50.606] I (3865) esp_mqtt: esp_mqtt_process: begin connection attempt
+[2018-06-24 12:23:50.645] I (3915) esp_mqtt: esp_mqtt_process: connection attempt successful
+[2018-06-24 12:23:50.650] I (3920) MQTT: Subscriped to max32/cmd/240ac4034d00/#
+[2018-06-24 12:23:50.850] I (4118) MQTT: incoming: max32/cmd/240ac4034d00/temperature => 19.0 (4)
+[2018-06-24 12:23:50.854] I (4119) MQTT: Target temperature set to 19.0°C
+[2018-06-24 12:23:50.860] D (4120) HEATC: Target temperature set to 19.0
+[2018-06-24 12:23:50.867] I (4125) MQTT: Publish: "25.6" to "max32/status/240ac4034d00/temperature"
+[2018-06-24 12:23:50.870] I (4136) MQTT: Publish: "43.6" to "max32/status/240ac4034d00/humidity"
+[2018-06-24 12:23:50.876] I (4142) wifi: state: run -> init (0)
+[2018-06-24 12:23:50.882] I (4144) wifi: n:11 0, o:11 0, ap:255 255, sta:11 0, prof:1
+[2018-06-24 12:23:50.887] D (4149) event: SYSTEM_EVENT_STA_DISCONNECTED, ssid:FruitNET_Dev, ssid_len:12, bssid:c0:c1:c0:b0:89:d0, reason:8
+[2018-06-24 12:23:50.898] D (4158) tcpip_adapter: check: local, if=0 fn=0x400efc38
+[2018-06-24 12:23:50.904] 
+[2018-06-24 12:23:50.904] I (4159) wifi: flush txq
+[2018-06-24 12:23:50.904] D (4164) tcpip_adapter: if0 start ip lost tmr: enter
+[2018-06-24 12:23:50.909] I (4166) wifi: stop sw txq
+[2018-06-24 12:23:50.909] D (4171) tcpip_adapter: if0 start ip lost tmr: interval=120
+[2018-06-24 12:23:50.915] I (4174) wifi: lmac stop hw txq
+[2018-06-24 12:23:50.920] D (4179) tcpip_adapter: call api in lwip: ret=0x0, give sem
+[2018-06-24 12:23:50.926] D (4182) RTC_MODULE: Wi-Fi returns adc2 lock.
+[2018-06-24 12:23:50.932] D (4192) tcpip_adapter: check: remote, if=0 fn=0x400efc38
+[2018-06-24 12:23:50.937] 
+[2018-06-24 12:23:50.937] E (4198) wifi: esp_wifi_connect 859 wifi not start
+[2018-06-24 12:23:50.942] D (4202) event: SYSTEM_EVENT_STA_STOP
+[2018-06-24 12:23:50.942] D (4206) SYS: Enter deep sleep
+[2018-06-24 12:23:50.948] D (4206) tcpip_adapter: check: local, if=0 fn=0x400efaa8
+[2018-06-24 12:23:50.954] 
+[2018-06-24 12:23:50.954] D (4215) tcpip_adapter: call api in lwip: ret=0x5001, give sem
+[2018-06-24 12:23:50.959] D (4221) tcpip_adapter: check: remote, if=0 fn=0x400efaa8
+[2018-06-24 12:23:50.965] 
+[2018-06-24 12:23:50.965] D (4226) sleep: RTC_PERIPH: AUTO(OFF), RTC_SLOW_MEM: ON, RTC_FAST_MEM: ON
